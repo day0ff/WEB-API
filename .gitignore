@@ -1,8 +1,11 @@
 # IDEs and editors
-/.idea
+**/.idea
 
 # dependencies
-/node_modules
+**/node_modules
+
+# support directories
+**/temp
 
 # snapshots
 package-lock.json
