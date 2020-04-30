@@ -1,0 +1,25 @@
+{
+  "name": "speech_02_words_in_pictures",
+  "version": "1.0.0",
+  "description": "Shows images of spoken words.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "serve": "nodemon src/app.js -e js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "speech",
+    "web",
+    "api",
+    "google",
+    "words",
+    "pictures"
+  ],
+  "author": "Denis Vershadov",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3"
+  }
+}
