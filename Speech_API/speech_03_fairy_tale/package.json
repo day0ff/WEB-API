@@ -1,0 +1,24 @@
+{
+  "name": "speech_03_fairy_tale",
+  "version": "1.0.0",
+  "description": "You should read fairy tail and pictures from it will be alive.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "serve": "nodemon src/app.js -e js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "speech",
+    "web",
+    "api",
+    "fairy",
+    "tale"
+  ],
+  "author": "Denis Vershadov",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3"
+  }
+}
