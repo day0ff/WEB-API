@@ -30,9 +30,14 @@ h3 {
 }
 
 p{
+    font-size: 128px;
+    line-height: 132px;
+}
+
+/*p{
     font-size: 32px;
     line-height: 36px;
-}
+}*/
 
 header{
     position: fixed;
@@ -54,14 +59,17 @@ article{
 }
 
 article.container{
-    margin: 88px auto 32px;
+    margin: 128px auto 32px;
     padding: 16px;
-    height: calc(100vh - 152px);
+    height: calc(80vh - 152px);
 }
 
 article p {
     display: flex;
+    justify-content: center;
     align-items: center;
+    height: 100%;
+    text-align: center;
 }
 
 footer{
