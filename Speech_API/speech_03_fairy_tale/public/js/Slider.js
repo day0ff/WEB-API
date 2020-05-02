@@ -2,7 +2,7 @@ export default class Slider {
     constructor({selector} = {selector: '.slider'}) {
         this.slider = document.querySelector(selector);
         this.attachEvents();
-
+        this.timer = false;
     }
 
     attachEvents() {
@@ -15,6 +15,8 @@ export default class Slider {
 
         current.classList.remove('active');
         current.classList.add('previous');
+        current.querySelector('div').firstElementChild.innerHTML = current.textContent;
+
         if (nextElementSibling) {
             nextElementSibling.classList.remove('next');
             nextElementSibling.classList.add('active');
@@ -29,8 +31,9 @@ export default class Slider {
                     item.classList.add('active');
                 }
             });
-
         }
+
+        this.timer = false;
     }
 
     markWords(words) {
@@ -39,11 +42,13 @@ export default class Slider {
         const markArray = markElement && this.getArrayOfWords(markElement.textContent) || [];
         const textArray = this.getArrayOfWords(textElement.textContent).slice(markArray.length);
         const wordsArray = words.flatMap(word => this.getArrayOfWords(word));
+
         wordsArray.forEach(word => {
             if (textArray[0] === word) {
                 markArray.push(textArray.shift());
             }
         });
+
         const markString = markArray.join('').split('');
         const markText = textElement.textContent.split('').reduce((acc, char) => {
             if (markString.length) {
@@ -52,8 +57,13 @@ export default class Slider {
             }
             return acc;
         }, []).join('');
-        textElement.innerHTML = '<mark>' + markText +'</mark>' + textElement.textContent.slice(markText.length);
-        !textArray.length && this.nextSlide();
+
+        textElement.innerHTML = '<mark>' + markText + '</mark>' + textElement.textContent.slice(markText.length);
+
+        if (!textArray.length && !this.timer) {
+            this.timer = true;
+            window.setTimeout(() => this.nextSlide(), 800);
+        }
     }
 
     getArrayOfWords(text) {

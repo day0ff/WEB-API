@@ -76,7 +76,7 @@ article{
 article.container{
     margin: 128px auto 32px;
     padding: 0;
-    height: calc(100vh - 172px);
+    height: calc(100vh - 256px);
 }
 
 footer{
@@ -162,7 +162,7 @@ mark{
     position: relative;
     object-fit: scale-down;
     width: 100%;
-    height: calc(100% - 112px);
+    /*height: calc(100% - 112px);*/
 }
 .item div{
     position: relative;
