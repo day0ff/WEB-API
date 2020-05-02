@@ -2,6 +2,7 @@ export default class Slider {
     constructor({selector} = {selector: '.slider'}) {
         this.slider = document.querySelector(selector);
         this.attachEvents();
+
     }
 
     attachEvents() {
@@ -30,5 +31,32 @@ export default class Slider {
             });
 
         }
+    }
+
+    markWords(words) {
+        const textElement = this.slider.querySelector('li.item.active div').firstElementChild;
+        const markElement = textElement.querySelector('mark');
+        const markArray = markElement && this.getArrayOfWords(markElement.textContent) || [];
+        const textArray = this.getArrayOfWords(textElement.textContent).slice(markArray.length);
+        const wordsArray = words.flatMap(word => this.getArrayOfWords(word));
+        wordsArray.forEach(word => {
+            if (textArray[0] === word) {
+                markArray.push(textArray.shift());
+            }
+        });
+        const markString = markArray.join('').split('');
+        const markText = textElement.textContent.split('').reduce((acc, char) => {
+            if (markString.length) {
+                acc.push(char);
+                markString[0] === char.toLowerCase() && markString.shift();
+            }
+            return acc;
+        }, []).join('');
+        textElement.innerHTML = '<mark>' + markText +'</mark>' + textElement.textContent.slice(markText.length);
+        !textArray.length && this.nextSlide();
+    }
+
+    getArrayOfWords(text) {
+        return text ? text.replace(/[^a-zA-Zа-яА-Я ]/g, ' ').replace(/\s\s+/g, ' ').trim().toLowerCase().split(' ') : [];
     }
 }

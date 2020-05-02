@@ -4,26 +4,55 @@
     <meta charset="utf-8">
     <title>WEB Speech API</title>
     <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/script.js"></script>
+    <script type="module" src="/js/script.js"></script>
+    <script type="module" src="/js/Slider.js"></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Fairy Tale</h1>
-            <select>
-                <option selected="selected" value="en-En">En</option>
-                <option value="ru-RU">Ru</option>
-            </select>
-        </div>
-    </header>
-    <article class="container">
-        <p>Колобок</p>
-    </article>
-    <section class="container">
-        <h4>Чтобы начать произнесите название сказки.</h4>
-    </section>
-    <footer>
-        <h2>JS</h2>
-    </footer>
+<header>
+    <div class="container">
+        <h1>Fairy Tale</h1>
+        <select>
+            <option value="en-En">En</option>
+            <option selected="selected" value="ru-RU">Ru</option>
+        </select>
+    </div>
+</header>
+<article class="container">
+    <ul class="slider">
+        <li class="item active">
+            <img src="/images/johny-cake/johny-cake-01.jpg"/>
+            <div>
+                <h4 class="ru">Колобок</h4>
+            </div>
+        </li>
+        <li class="item next">
+            <img src="/images/johny-cake/johny-cake-02.jpg"/>
+            <div>
+                <h4 class="ru">далее...</h4>
+            </div>
+        </li>
+        <li class="item next">
+            <img src="/images/johny-cake/johny-cake-03.jpg"/>
+            <div>
+                <p class="ru">Жили-были старик со старухой. Как-то говорит старик:<br/>- На скреби-ка, жена, муки да испеки колобок.</p>
+            </div>
+        </li>
+        <li class="item next">
+            <img src="/images/johny-cake/johny-cake-04.jpg"/>
+            <div>
+                <p class="ru">Наскребла старуха муки горсти две, замесила колобок.<br/>- Ну-ка, дружок, полезай в печь.</p>
+            </div>
+        </li>
+        <li class="item next">
+            <img src="/images/johny-cake/johny-cake-05.jpg"/>
+            <div>
+                <p class="ru">Когда колобок испекся, старуха положила его на окошко остудиться. Лежал, лежал колобок. Стало ему скучно<br/>- взял да и покатился, с окошка до двери...</p>
+            </div>
+        </li>
+    </ul>
+</article>
+<footer>
+    <h2>JS</h2>
+</footer>
 </body>
 </html>
