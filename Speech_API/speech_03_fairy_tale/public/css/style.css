@@ -36,12 +36,12 @@ h4 {
     line-height: 44px;
 }
 
-p{
+p {
     font-size: 32px;
     line-height: 36px;
 }
 
-header{
+header {
     position: fixed;
     top: 0;
     z-index: 1;
@@ -49,37 +49,45 @@ header{
     border-bottom: solid 1px var(--color-gray);
 }
 
-header .container{
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 32px;
 }
 
-section{
+header a{
+    text-decoration: none;
+}
+
+header a:visited{
+    color: var(--color-gray);
+}
+
+section {
     background-color: white;
 }
 
-section.container{
+section.container {
     margin: 32px auto;
     padding: 16px;
 }
 
-section h4{
+section h4 {
     text-align: center;
 }
 
-article{
+article {
     background-color: white;
 }
 
-article.container{
+article.container {
     margin: 128px auto 32px;
     padding: 0;
     height: calc(100vh - 256px);
 }
 
-footer{
+footer {
     position: fixed;
     margin: 0;
     padding: 0;
@@ -87,7 +95,7 @@ footer{
     bottom: 32px;
 }
 
-select, button{
+select, button {
     transition: background-color 0.8s linear;
     height: 32px;
     background-color: #f0db4f;
@@ -95,30 +103,45 @@ select, button{
     font-size: 24px;
 }
 
-select:hover, button:hover{
+select:hover, button:hover {
     transition: background-color 0.8s linear;
     background-color: white;
     cursor: pointer;
 }
 
-mark{
-    color:var(--color-orangered);
+menu{
+    padding-top: 40px;
+}
+
+menu ol li{
+    font-size: 48px;
+    line-height: 54px;
+    padding: 0 16px;
+    /*list-style: none;*/
+}
+
+menu ol li a{
+    text-decoration: none;
+}
+
+menu ol li a:visited{
+    color: var(--color-gray);
+}
+menu ol li a:hover{
+    text-decoration: underline;
+}
+
+mark {
+    color: var(--color-orangered);
     background-color: transparent;
 }
 
-.container{
+.container {
     max-width: var(--width);
     margin: 0 auto;
 }
 
-.picture{
-    object-fit: cover;
-    width: auto;
-    height: 64px;
-    top: 0;
-}
-
-.slider{
+.slider {
     position: relative;
     margin: 0;
     padding: 0;
@@ -127,55 +150,58 @@ mark{
     overflow: hidden;
 }
 
-.item{
-    transition:top 1s, bottom 1s;
+.item {
+    transition: top 1s, bottom 1s;
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
-    list-style:none;
+    list-style: none;
 }
 
-.item.previous{
-    top:-100%;
+.item.previous {
+    top: -100%;
     left: 0;
     right: 0;
     bottom: 100%;
 }
 
-.item.active{
-    top:0;
+.item.active {
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
 }
 
-.item.next{
-    top:100%;
+.item.next {
+    top: 100%;
     left: 0;
     right: 0;
     bottom: -100%;
 }
 
-.item img{
+.item img {
     position: relative;
-    object-fit: scale-down;
     width: 100%;
-    /*height: calc(100% - 112px);*/
+    height: 100%;
 }
-.item div{
-    position: relative;
+
+.item div {
+    position: absolute;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    bottom: 0;
 }
 
-.item h1, h2, h3, h4, p{
+.item h1, .item h2, .item h3, .item h4, .item p {
     position: relative;
     width: 100%;
     text-align: center;
     font-weight: bold;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
 }
