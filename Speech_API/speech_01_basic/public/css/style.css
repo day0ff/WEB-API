@@ -3,7 +3,7 @@ body {
     margin: 0;
 }
 
-header{
+header {
     position: fixed;
     top: 0;
     z-index: 1;
@@ -12,7 +12,7 @@ header{
     border-bottom: solid 1px #323330;
 }
 
-header div{
+header div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,7 +21,7 @@ header div{
     padding: 0 32px;
 }
 
-select, button{
+select, button {
     transition: background-color 0.8s linear;
     height: 32px;
     background-color: #f0db4f;
@@ -29,7 +29,7 @@ select, button{
     font-size: 24px;
 }
 
-select:hover, button:hover{
+select:hover, button:hover {
     transition: background-color 0.8s linear;
     background-color: white;
 }
@@ -50,17 +50,17 @@ select:hover, button:hover{
     height: calc(100vh - 196px);
 }
 
-.save{
+.save {
     width: 100%;
     padding: 0;
 }
 
-.save h3{
+.save h3 {
     text-align: right;
     padding-bottom: 16px;
 }
 
-content{
+content {
     display: block;
     min-height: 60%;
     background-color: white;
@@ -78,13 +78,13 @@ h1 {
     padding: 16px 16px 32px;
 }
 
-p{
+p {
     font-size: 32px;
     line-height: 36px;
     margin: 8px 0;
     border-bottom: solid 1px #323330;
 }
 
-button:hover, select:hover, option:hover{
+button:hover, select:hover, option:hover {
     cursor: pointer;
 }
