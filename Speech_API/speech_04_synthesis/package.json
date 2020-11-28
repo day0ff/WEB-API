@@ -1,0 +1,22 @@
+{
+  "name": "speech_api",
+  "version": "1.0.0",
+  "description": "WEB Speech synthesis API",
+  "main": "./src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "serve": "nodemon src/app.js -e js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "speech",
+    "web",
+    "api",
+    "synthesis"
+  ],
+  "author": "Denis Vershadov",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
