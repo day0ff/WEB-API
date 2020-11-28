@@ -56,11 +56,11 @@ header .container {
     padding: 0 32px;
 }
 
-header a{
+header a {
     text-decoration: none;
 }
 
-header a:visited{
+header a:visited {
     color: var(--color-gray);
 }
 
@@ -109,25 +109,27 @@ select:hover, button:hover {
     cursor: pointer;
 }
 
-menu{
+menu {
     padding-top: 40px;
 }
 
-menu ol li{
+menu li {
     font-size: 48px;
     line-height: 54px;
     padding: 0 16px;
     /*list-style: none;*/
 }
 
-menu ol li a{
+menu a {
     text-decoration: none;
-}
-
-menu ol li a:visited{
     color: var(--color-gray);
 }
-menu ol li a:hover{
+
+menu a:visited {
+    color: var(--color-gray);
+}
+
+menu a:hover {
     text-decoration: underline;
 }
 
